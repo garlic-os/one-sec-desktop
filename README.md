@@ -3,6 +3,8 @@ Qt port of [One Sec](https://one-sec.app/) by [riedel.wtf GmbH](https://riedel.w
 
 Wanted a desktop version of One Sec. Didn't exist. So I made it!
 
+Add onesec.exe to the beginning of a command (like in a shortcut) and have the familiar One Sec interface pop up to give you a 10-second opportunity to think again.
+
 ```
 Usage: onesec.exe [options] <program> [arguments]
 
@@ -14,7 +16,7 @@ Options:
 ```
 
 ## Compiling
-Made for Windows in Qt Creator 12.0 with Qt 6.5.3 and MSVC2019. Other configurations/OSes are surely possible just with other configurations.  
+Made for Windows in Qt Creator 12.0 with Qt 6.5.3 and MSVC2019. Other configurations/OSes are surely possible but I just haven't tested it with anything else.  
 Uh sorry I don't actually know how to configure Qt Creator's Projects section for other people so just bear with me
 1. Open the project in Qt Creator
 2. Add a kit for whatever Qt6 version, compiler, and architecture you want to compile it for
