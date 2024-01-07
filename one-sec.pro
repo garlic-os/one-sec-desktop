@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -37,3 +37,5 @@ DISTFILES += \
 
 RESOURCES += \
     assets.qrc
+
+RC_ICONS = one-sec.ico
