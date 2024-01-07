@@ -33,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent,
 {
     ui->setupUi(this);
 
+    setWindowFlags(windowFlags() | Qt::MSWindowsFixedSizeDialogHint);
+    setFixedSize(width(), height());
+
     // Load theme
     QFile themeFile(":/style.qss");
     themeFile.open(QFile::ReadOnly | QFile::Text);
