@@ -88,6 +88,8 @@ MainWindow::MainWindow(QWidget *parent,
 
     // ----------------------------------------
     // Animations
+    const quint64 breatheExerciseSpeed = settings.value("breathe-exercise-speed-ms", 10000).toUInt();
+
     opacityBreathe = new QGraphicsOpacityEffect(this);
     ui->wrapperBreathe->setGraphicsEffect(opacityBreathe);
 
@@ -107,7 +109,7 @@ MainWindow::MainWindow(QWidget *parent,
     animBgFadeOut->setEasingCurve(QEasingCurve::OutBack);
 
     animWidgetBgGradientMoveUp = new QPropertyAnimation(ui->widgetBgGradient, "pos", this);
-    animWidgetBgGradientMoveUp->setDuration(3000);
+    animWidgetBgGradientMoveUp->setDuration(breatheExerciseSpeed * 3 / 10);
     animWidgetBgGradientMoveUp->setStartValue(QPoint(0, 600));
     animWidgetBgGradientMoveUp->setEndValue(QPoint(0, 0));
     animWidgetBgGradientMoveUp->setEasingCurve(QEasingCurve::InOutCubic);
@@ -123,7 +125,7 @@ MainWindow::MainWindow(QWidget *parent,
     animInhale->addAnimation(animBreatheFadeIn);
 
     animWidgetBgGradientMoveDown = new QPropertyAnimation(ui->widgetBgGradient, "pos", this);
-    animWidgetBgGradientMoveDown->setDuration(7000);
+    animWidgetBgGradientMoveDown->setDuration(breatheExerciseSpeed * 7 / 10);
     animWidgetBgGradientMoveDown->setStartValue(QPoint(0, 0));
     animWidgetBgGradientMoveDown->setEndValue(QPoint(0, 600));
     animWidgetBgGradientMoveDown->setEasingCurve(QEasingCurve::InOutCubic);
