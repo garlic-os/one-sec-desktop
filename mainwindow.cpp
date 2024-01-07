@@ -142,6 +142,11 @@ MainWindow::MainWindow(QWidget *parent,
             ui->labelMsgItsTime->hide();
             opacityAttempts->setOpacity(1);
         }
+        // Enable buttons when breathe exercise ends
+        else if (newState == QAbstractAnimation::Stopped) {
+            ui->buttonCancel->setEnabled(true);
+            ui->buttonContinue->setEnabled(true);
+        }
     });
 
     animBreathe = new QSequentialAnimationGroup;
@@ -178,6 +183,9 @@ MainWindow::MainWindow(QWidget *parent,
         switch (state) {
             case Qt::ApplicationActive: {
                 animBreathe->start();
+                // Disable buttons at the start of the breathe exercise, until it ends
+                ui->buttonCancel->setEnabled(false);
+                ui->buttonContinue->setEnabled(false);
                 break;
             }
             default: {
