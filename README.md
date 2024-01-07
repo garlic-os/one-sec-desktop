@@ -28,7 +28,7 @@ Uh sorry I don't actually know how to configure Qt Creator's Projects section fo
     - Command: `cmd`
     - Arguments: `/c "copy %{buildDir}\release\one-sec.exe %{buildDir}\dist\onesec.exe"`
     - Working directory: `%{buildDir}` (Copy File doesn't let you use ${buildDir})
-5. Press the hammer button and Qt Creator will compile the project to |%{buildDir}\dist|
+5. Press the hammer button and Qt Creator will compile the project to `%{buildDir}\dist`
 ## Missing features
 - Themes (I think): the website demo shows a different gradient for Instagram and there seems to be code in One Sec proper for other themes. But in Android and Desktop I've only ever seen the one dark theme, so that's all this has.
 - Localization: only English. Sorry
