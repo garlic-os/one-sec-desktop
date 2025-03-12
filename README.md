@@ -12,7 +12,7 @@ Options:
   -?, -h, --help     Displays help on commandline options.
   --help-all         Displays help including Qt specific options.
   -v, --version      Displays version information.
-  -n, --name <name>  Optional name for the program.
+  -n, --name <name>  Optional name for the program to display in the interface.
 ```
 
 ## Compiling
