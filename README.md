@@ -3,10 +3,10 @@ Qt port of [One Sec](https://one-sec.app/) by [riedel.wtf GmbH](https://riedel.w
 
 Wanted a desktop version of One Sec. Didn't exist. So I made it!
 
-Add onesec.exe to the beginning of a command (like in a shortcut) and have the familiar One Sec interface pop up to give you a 10-second opportunity to think again.
+Add onesec.exe to the beginning of a command (like in a shortcut) and have the familiar One Sec interface pop up to give you a 10-second opportunity to rethink.
 
 ```
-Usage: onesec.exe [options] <program> [arguments]
+Usage: onesec.exe [options] <executable path> [executable's arguments]
 
 Options:
   -?, -h, --help     Displays help on commandline options.
